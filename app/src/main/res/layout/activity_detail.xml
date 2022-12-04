@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_view_title"
+                style="@style/CustomTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/title" />
+
+            <EditText
+                android:id="@+id/edit_text_title"
+                style="@style/CustomEditView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_title"
+                android:autofillHints="@string/title"
+                android:hint="@string/title"
+                android:inputType="textShortMessage" />
+
+            <TextView
+                android:id="@+id/text_view_date"
+                style="@style/CustomTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_text_title"
+                android:text="@string/date" />
+
+            <TextView
+                android:id="@+id/text_view_diary_date"
+                style="@style/CustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_date"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/button_calendar"
+                android:text="@string/yyyy_mm_dd" />
+
+            <Button
+                android:id="@+id/button_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_date"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"
+                android:paddingStart="18dp"
+                android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+                android:onClick="openCalendar"
+                android:text="@string/calendar" />
+
+            <TextView
+                android:id="@+id/text_view_location"
+                style="@style/CustomTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_diary_date"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/button_calendar"
+                android:text="@string/location" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_location" />
+
+            <Button
+                android:id="@+id/button_add_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_view_location"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="14dp"
+                android:paddingEnd="20dp"
+                android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                android:drawableTint="@color/white"
+                android:onClick="addLocation"
+                android:text="@string/add_location" />
+
+            <TextView
+                android:id="@+id/text_view_description"
+                style="@style/CustomTextViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_add_location"
+                android:text="@string/description" />
+
+            <EditText
+                android:id="@+id/edit_text_description"
+                style="@style/CustomEditView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_description"
+                android:autofillHints="@string/description"
+                android:hint="@string/description"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/button_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_text_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:onClick="updateDiary"
+                android:text="@string/save" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

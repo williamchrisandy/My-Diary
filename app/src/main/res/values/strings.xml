@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Diary</string>
+    <string name="api_key">CgB6e3x9E3Z7DAXQ70ezNDC7Is1lpQ0FoaJquVh2jroyGDEIHAs/OioWwUcEXzHSmg7NxSsehEACPvrDg4/sn4RA</string>
+    <string name="search">Search</string>
+    <string name="search_place">Search place…</string>
+    <string name="add_location">Add Location</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="add">Add</string>
+    <string name="calendar">Calendar</string>
+    <string name="date">Date</string>
+    <string name="location">Location</string>
+    <string name="add_diary">Add Diary</string>
+    <string name="yyyy_mm_dd">yyyy-mm-dd</string>
+    <string name="save">Save</string>
+</resources>
